@@ -18,9 +18,20 @@ settings =
 	--
 	android =
 	{
+		versionCode = "11",
+		usesExpansionFile = true,
+
 		usesPermissions =
 		{
 			"android.permission.INTERNET",
+			"android.permission.WRITE_EXTERNAL_STORAGE",
+		},
+		
+		usesFeatures =
+		{
+			{ name="android.hardware.camera", required=false },
+			{ name="android.hardware.location", required=false },
+			{ name="android.hardware.location.gps", required=false },
 		},
 	},
 
