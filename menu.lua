@@ -1,6 +1,13 @@
 
 --หน้า MENU --
 ------------------------------------------------------
+local composer = require( "composer" )
+local stage1 = require( "stage1" )
+
+
+-- Variables local to scene
+local backgroundMusic = audio.loadStream( "sound/screen/titletheme.wav" )               --ใส่เสียงพื้นหลัง
+--audio.play( backgroundMusic )                   --เรียกเสียงให้เล่น
 
 local background = display.newImageRect( "image/background/testbg2.png", 2200 , 1280 )  --ใส่ภาพพื้นหลัง
 background.x = display.contentCenterX           --ปรับขนาดพื้นหลัง
@@ -16,9 +23,12 @@ local button = display.newImageRect( "image/button/buttonHelp.png", 450, 150 )  
 button.x = display.contentHeight-400            --ปรับตำแหน่งแนวนอน
 button.y = display.contentHeight-250            --ปรับตำแหน่งแนวตั้ง
 
--- stream music
--- bgMusic = audio.loadStream( "sound/screen/titletheme.wav" )
 
-local physics = require( "physics" )
-physics.start()
+
+-- local physics = require( "physics" )
+-- physics.start()
+
+-- Transtion in logo
+-- transition.from( ui:findObject( "image/background/title.png" ),
+-- { xScale = 2.5, yScale = 2.5, time = 333, transition = easing.outQuad } )
 ------------------------------------------------------

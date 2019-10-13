@@ -1,10 +1,13 @@
 -----------------------------------------------------------------------------------------
---
 -- main.lua
---
 -----------------------------------------------------------------------------------------
+
 -- Include the Composer library
 local composer = require( "composer" )
+local menu = require( "menu" ) --เรียกหน้า menu มาแสดง
+
+-- Create a new Composer scene
+local scene = composer.newScene()
 
 -- Removes status bar on iOS
 -- https://docs.coronalabs.com/api/library/display/setStatusBar.html
