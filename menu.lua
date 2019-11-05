@@ -2,8 +2,8 @@
 --หน้า MENU --
 ------------------------------------------------------
 local composer = require( "composer" )
-local stage1 = require( "stage1" )
-
+-- local button = require( "button" )
+-- local stage1 = require( "stage1" )
 
 -- Variables local to scene
 local backgroundMusic = audio.loadStream( "sound/screen/titletheme.wav" )               --ใส่เสียงพื้นหลัง
@@ -24,11 +24,5 @@ button.x = display.contentHeight-400            --ปรับตำแหน่
 button.y = display.contentHeight-250            --ปรับตำแหน่งแนวตั้ง
 
 
-
--- local physics = require( "physics" )
--- physics.start()
-
--- Transtion in logo
--- transition.from( ui:findObject( "image/background/title.png" ),
--- { xScale = 2.5, yScale = 2.5, time = 333, transition = easing.outQuad } )
-------------------------------------------------------
+-- Create a new Composer scene
+local scene = composer.newScene()
